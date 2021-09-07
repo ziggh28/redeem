@@ -25,3 +25,6 @@ def post(request):
 def posts_index(request):
   return render(request, 'posts/index.html', { 'posts': posts })
 
+def home(request):
+  return render(request, 'home.html')
+
