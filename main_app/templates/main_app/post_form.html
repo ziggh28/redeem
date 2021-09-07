@@ -6,9 +6,12 @@
 {% endblock %}
 
 {% block content %}
-
-<div class="page-header">
-  <h1>Add post</h1>
+ <!-- New if/else block -->
+  {% if object %}
+    <h1>Edit {{object.name}}</h1>
+  {% else %}
+    <h1>Add a Cat</h1>
+  {% endif %}
 </div>
 {% comment %} 
   Leaving the action empty makes the form post to the same url used to display it

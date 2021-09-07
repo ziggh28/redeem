@@ -4,8 +4,10 @@ from .models import post
 # Create your views here.
 # Add the following import
 from django.http import HttpResponse
+from django.contrib.auth.views import LoginView
 
-
+class Home(LoginView):
+  template_name = 'home.html'
 
 class Post:  # Note that parens are optional if not inheriting from another class
   def __init__(self, title, category, comment, ):
