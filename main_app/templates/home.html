@@ -13,23 +13,6 @@
 
 {% block content %}
 
-<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light style=" style='background-color: #fff'>
-  <div class='container'>
-    <a class='navbar-brand' href='/'>redeem it </a>
-      <button class = 'navbar-toggler' = type="button" data-toggle="collapse"             data-target="#navbarNavAltmarkup"aria-controls='navbarNavAltmarkup' aria-expnaded="false" aria-label="Toggle navigator">
-        <span class='navbar-toggler-icon'></span>
-      </button>
-      <form class='mx-2 my-auto d-inline w-100' style='magin-left: 100px; margin-right: 100px'>
-        <input class="form-control mr-sm-2" type='search' placeholder="Search" aria-label="Search">
-      </form>
-  <div class="collapse navbar-collapse" id="navbarNavAltmarkup">
-      <div class='navbar-nav ml auto'>
-         <a class="nav-item btn btn-outline-primary mx-2" href="/login">Login</a>
-          <a class="nav-item btn btn-primary " href="/signup">Signup</a>
-      </div>
-    </div>
-   </div>
-</nav>
  <div class='container'>
     <div class='row'>
       <div class='col-sm-8'>
@@ -43,7 +26,7 @@
               <button class="btn btn-light btn-sm">
                 <i class="fas fa-arrow-down"></i>
               </button>
-            </strong><span class="texted-muted" style='font-size:10px'>user name</span>
+            </strong><span class="texted-muted" style='font-size:100px'>user name</span>
           </div>
           <div class="card-footer texted-muted">
             <h5 class="card-title">user</h5>
@@ -54,15 +37,12 @@
           </div>
         </div>
     </div>              
-    <div class='col-sm-4'>
-      <div class='card'>
-        <div class='card'>
           <div class='card-body'>
            <h5 class="card-title">most popular</h5>
             <p class="card-text">
             random ass comment random ass comment random ass comment random ass comment
             </p>
-            <a href="/" class="btn btn-primary btn-block">create post</a>
+            <a href="createpost/" class="btn btn-primary btn-block">create post</a>
 
 </div>
 {% endblock %}

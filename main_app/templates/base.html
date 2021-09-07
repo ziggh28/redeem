@@ -9,10 +9,10 @@
   <link
     rel="shortcut icon"
     type="image/png"
-    href=""
+    href="{% static 'images/splash.svg' %}"
   >
   <title>redeem it</title>
-  <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+   <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
   {% block head %}
   {% endblock %}
 </head>
@@ -21,18 +21,22 @@
     <div class="header-logo-container">
       <a href="/">
         <img 
-          src="" 
-          alt="logo"
+          src="{% static 'images/header-logo.svg' %}" 
+          alt="redeem it"
         >
       </a>
     </div>
     <nav>
       <ul>
-        <li><a href="{% url 'posts_index'%}">all post</a></li>
-        <li><a href="{}">add a post</a></li>
-        <li><a href="{% url 'post'%}">post</a></li>
-      </ul>
-    </nav>
+      <form class='mx-2 my-auto d-inline w-100'>
+        <input class="form-control mr-sm-2" type='search' placeholder="Search" aria-label="Search">
+      </form>
+      <button>enter</button>
+    <li><a href="">Login</a><i>
+    <li><a href="">Signup</a><i>
+    </div>
+   </div>
+</nav>
   </header>
   <main>
     {% block content %}

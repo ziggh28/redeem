@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 from datetime import date
 from django.contrib.auth.models import User
+from django.db.models.deletion import CASCADE
 
 # Create your models here.
 class post(models.Model):
