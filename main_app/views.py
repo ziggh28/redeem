@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import post
 # Create your views here.
 # Add the following import
@@ -7,16 +7,16 @@ from django.http import HttpResponse
 
 
 
-class post:  # Note that parens are optional if not inheriting from another class
-  def __init__(self, username, category, description, ):
-    self.username = username
+class Post:  # Note that parens are optional if not inheriting from another class
+  def __init__(self, title, category, comment, ):
+    self.title = title
     self.category = category
-    self.description = description
+    self.comment = comment
     
 posts = [
- post('zigg','yes','helo',),
- post('zouhrab','yessss','helo',),
- post('zeek','yessir','helo',),
+ Post('zigg','yes','helo',),
+ Post('zouhrab','yessss','helo',),
+ Post('zeek','yessir','helo',),
 ]
 
 # Define the home view
@@ -35,10 +35,18 @@ def home(request):
 
 def posts_detail(request, post_id):
   posts = post.object.get(id=post_id)
-  return render(request, 'posts/detail.html', {'post': post})
+  return render(request, 'posts/detail.html', {'posts': posts})
 
 class postCreate(CreateView):
   model = post
-  field = '_all_'
-  success_url = '/posts/'
+  fields = [ 'title', 'category', 'comment',]
+  
+
+class postUpdate(UpdateView):
+  model = post 
+  fields = [ 'title', 'category', 'comment',]
+
+class postDelete(DeleteView):
+   model = post 
+   success_url = '/posts/'
 
