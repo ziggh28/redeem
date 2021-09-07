@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import post
 # Create your views here.
 # Add the following import
 from django.http import HttpResponse
@@ -23,7 +23,8 @@ def post(request):
     return render(request, 'post.html')
 
 def posts_index(request):
-  return render(request, 'posts/index.html', { 'posts': posts })
+  posts: post.objects.all()
+  return render(request, 'allposts/index.html', { 'posts': posts })
 
 def home(request):
   return render(request, 'home.html')
