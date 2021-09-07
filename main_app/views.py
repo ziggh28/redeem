@@ -1,8 +1,12 @@
 from django.shortcuts import render
+from django.views.generic.edit import CreateView
 from .models import post
 # Create your views here.
 # Add the following import
 from django.http import HttpResponse
+
+
+
 class post:  # Note that parens are optional if not inheriting from another class
   def __init__(self, username, category, description, ):
     self.username = username
@@ -24,7 +28,7 @@ def post(request):
 
 def posts_index(request):
   posts: post.objects.all()
-  return render(request, 'allposts/index.html', { 'posts': posts })
+  return render(request, 'posts/index.html', { 'posts': posts })
 
 def home(request):
   return render(request, 'home.html')
@@ -32,4 +36,9 @@ def home(request):
 def posts_detail(request, post_id):
   posts = post.object.get(id=post_id)
   return render(request, 'posts/detail.html', {'post': post})
+
+class postCreate(CreateView):
+  model = post
+  field = '_all_'
+  success_url = '/posts/'
 
