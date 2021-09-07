@@ -7,14 +7,18 @@
 
 {% block content %}
 
-<section>
-  <form action="{% url 'home' %}" method="post" class="login">
-    <h1>Login</h1>
-    {% csrf_token %}
-    {{ form.as_p }}
-    <input type="hidden" name="next" value="{{ next }}">
-    <button type="submit" class="btn submit">Login</button>
-  </form>
-</section>
-
+<nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light style=" style='background-color: #fff'>
+  <div class='container'>
+    <a class='navbar-brand' href='/'>redeem it </a>
+      <button class = 'navbar-toggler' = type="button" data-toggle="collapse"             data-target="#navbarNavAltmarkup"aria-controls='navbarNavAltmarkup' aria-expnaded="false" aria-label="Toggle navigator">
+        <span class='navbar-toggler-icon'></span>
+      </button>
+      <form class='mx-2 my-auto d-inline w-100' style='magin-left: 100px; margin-right: 100px'>
+        <input class="form-control mr-sm-2" type='search' placeholder="Search" aria-label="Search">
+      </form>
+<div class="collapse navbar-collapse" id="navbarNavAltmarkup">
+  <div class='navbar-nav ml auto'>
+    <a class="nav-item btn btn-outline-primary mx-2" href="/login">Login</a>
+    <a class="nav-item btn btn-outline-primary mx-2" href="/signup">Signup</a>
+</div>
 {% endblock %}
