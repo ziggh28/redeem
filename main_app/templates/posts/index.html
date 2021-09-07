@@ -18,6 +18,8 @@
 <section class="card-container">
   {% for post in posts %}
     <div class="card">
+    {% comment %} Add this line {% endcomment %}
+    <a href="{% url 'posts_detail' cat.id %}">
       <div class="card-content">
         <div class="card-img-container">
          

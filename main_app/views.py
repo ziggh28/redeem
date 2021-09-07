@@ -29,3 +29,7 @@ def posts_index(request):
 def home(request):
   return render(request, 'home.html')
 
+def posts_detail(request, post_id):
+  posts = post.object.get(id=post_id)
+  return render(request, 'posts/detail.html', {'post': post})
+
