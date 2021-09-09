@@ -5,15 +5,11 @@ from django.contrib.auth.models import User
 from django.db.models.deletion import CASCADE
 
 # Create your models here.
-class post(models.Model):
+class Post(models.Model):
   user = models.ForeignKey(User, on_delete=models.CASCADE)
-  title = models.CharField(max_length=100)
-  category = models.CharField(max_length=100)
-  comment = models.TextField(max_length=250)
- 
+  title = models.CharField(max_length=250)
+  comment = models.TextField()
+  
+  def __str__(self):
+    return self.title
 
-def __str__(self):
-    return self.name
-
-def get_absolute_url(self):
-  return reverse('posts_detail', kwargs={'post_id': self.id})

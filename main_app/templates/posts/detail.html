@@ -15,7 +15,6 @@
   
   <div class="post-details">
     <h1>{{ post.title }}</h1>
-     <h2>A {{ post.category }} </h2>
       <p>{{ post.comment }}</p>
       <div class="post-actions">
       <a href="{% url 'posts_update' post.id %}" class="btn warn">Edit</a>
