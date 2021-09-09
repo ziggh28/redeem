@@ -9,6 +9,9 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+import environ
+env = environ.Env()
+environ.Env.read_env()
 
 from pathlib import Path
 
@@ -77,8 +80,8 @@ WSGI_APPLICATION = 'redeem.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': env('PRODUCTION_DB_ENGINE') or 'django.db.backends.sqlite3',
+        'NAME': env('PRODUCTION_DB') or BASE_DIR / 'db.sqlite3',
     }
 }
 
