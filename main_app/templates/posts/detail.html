@@ -17,8 +17,8 @@
     <h1>{{ post.title }}</h1>
       <p>{{ post.comment }}</p>
       <div class="post-actions">
-      <a href="{% url 'posts_update' post.id %}" class="btn warn">Edit</a>
-      <a href="{% url 'posts_delete' post.id %}" class="btn danger">Delete</a>
+      <a href="{% url 'post_update' post.id %}" class="btn warn">Edit</a>
+      <a href="{% url 'post_delete' post.id %}" class="btn danger">Delete</a>
     </div>
   </div>
 </section>

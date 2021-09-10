@@ -13,43 +13,47 @@ class Login(LoginView):
 
 
 # Define the home view
-def home(request):
-  posts: Post.objects.all()
-  return HttpResponse('<h1>homepage</h1>')
+
 
 def post(request):
   return render(request, 'post.html')
 
 
 def posts_index(request):
+  posts = Post.objects.all()
   return render(request, 'posts/index.html', { 'posts': posts })
 
 def home(request):
-  return render(request, 'home.html')
+  posts = Post.objects.all()
+  return render(request, 'home.html', { 'posts': posts })
 
 def posts_detail(request, post_id):
-  posts = Post.objects.get(id=post_id)
-  return render(request, 'posts/detail.html', {'posts': posts})
+  post = Post.objects.get(id=post_id)
+  return render(request, 'posts/detail.html', {'post': post})
 
 
 
 class postCreate(CreateView):
   
   model = Post
-  fields = [ 'title', 'comment']
-
+  fields = ['title', 'comment']
+  success_url = "/"
   
   def form_valid(self,form):
-    form.instance.user - self.request.user
+    print(self.request.user)
+    form.instance.user = self.request.user
     return super().form_valid(form)
+    
   
 
 class postUpdate(UpdateView):
   model = Post 
   fields = [ 'title', 'comment',]
+  success_url = "/"
 
 class postDelete(DeleteView):
   model = Post 
+  success_url = "/"
 
 
 def signup(request):

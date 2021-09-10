@@ -2,8 +2,7 @@
 {% load static %}
 
 {% block head %}
-<title>redeem it - home</title>
-
+<link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}"/>
 {% endblock %}
 
 {% block content %}
@@ -23,4 +22,19 @@
 <p>
   recent
 </div>
+<section class="card-container">
+  {% for post in posts %}
+    <div class="card">
+    {% comment %} Add this line {% endcomment %}
+    <a href="{% url 'post_detail' post.id %}">
+      <div class="card-content">         
+        </div>
+         <h2 class="card-title">{{ post.title }}</h2>
+        
+          <p>A {{ post.comment }} </p>
+        
+      </div>
+    </div>
+  {% endfor %}
+</section>
 {% endblock %}

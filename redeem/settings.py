@@ -77,10 +77,10 @@ WSGI_APPLICATION = 'redeem.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-	'default': {
-		'ENGINE': 'django.db.backends.postgresql',
-		'NAME': 'redeemit',
-	}
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
 
 
@@ -123,7 +123,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 
-LOGIN_REDIRECT_URL = 'posts_index'
+LOGIN_REDIRECT_URL = 'home'
 
 # Add this variable to specify where logging out redirects to
 LOGOUT_REDIRECT_URL = 'home'
