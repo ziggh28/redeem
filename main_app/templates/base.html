@@ -15,15 +15,20 @@
 <body>
   <header 
   style="background-color:white">
-    <div class="header-logo-container">
-      <a href="/"></a>
+    {% comment %} <div class="header-logo-container">
+      <a href="/">
   <img id='logo'
-        style="height:40px; border-radius:50%;"
+        style="height:40px; border-radius:50%;background-color:white"
           src="{% static 'images/favicon.ico' %}" 
           alt="redeemit"
         >
+        <h4
+        style="flex-direction:column;"
+        >Redeem it</h4>
+        </a> {% endcomment %}
     </div>
-    <nav>
+    <nav
+      style="background-color:white; border:0;">
       <ul>
       <form class='mx-2 my-auto d-inline w-100'>
         <input class="form-control mr-lg-2" type='search' placeholder="Search" aria-label="Search">
