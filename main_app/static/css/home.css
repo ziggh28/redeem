@@ -1,3 +1,10 @@
+body{
+  background-color: rgba(242, 216, 216, 0.954);
+
+
+}
+
+
 .card-container {
   padding: 0 30px;
   display: flex;

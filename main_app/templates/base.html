@@ -13,16 +13,20 @@
   {% endblock %}
 </head>
 <body>
-  <header>
+  <header 
+  style="background-color:white">
     <div class="header-logo-container">
-      <a href="/">
-        
-      </a>
+      <a href="/"></a>
+  <img id='logo'
+        style="height:40px; border-radius:50%;"
+          src="{% static 'images/favicon.ico' %}" 
+          alt="redeemit"
+        >
     </div>
     <nav>
       <ul>
       <form class='mx-2 my-auto d-inline w-100'>
-        <input class="form-control mr-sm-2" type='search' placeholder="Search" aria-label="Search">
+        <input class="form-control mr-lg-2" type='search' placeholder="Search" aria-label="Search">
       </form>
       <button>enter</button>
       <ul>
