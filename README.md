@@ -112,7 +112,7 @@ apparently murphy(murphy's law) as a crush on me cause everything goes wrong esp
 
 # what I've learn:
 that there's never a one size fits all with code. every problem as unique answer even if it's the same as catcollector
-& im still good at this 
+& im still not good at this 
 
 
 
