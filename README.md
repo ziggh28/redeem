@@ -1,3 +1,4 @@
+
 # redeem-it
 
 
@@ -10,7 +11,7 @@ I was a little embarrassed about my unit 2 project & I wanted to a chance to go 
 
 # screenshots 
 
-
+![Screen Shot 2021-09-10 at 9 26 35 AM](https://user-images.githubusercontent.com/86076993/132860643-b923f6d8-9b95-4d2f-9863-6fb6de633f6e.png)
 
 ![Screen Shot 2021-07-30 at 1 37 19 AM](https://user-images.githubusercontent.com/86076993/127606368-a6faddcf-d6cb-4059-bef8-665390d9c3b1.png)
 
@@ -27,6 +28,8 @@ python
 django 
 
 css 
+
+html5
 
 # sample code:
 
@@ -104,7 +107,7 @@ def signup(request):
 
 
 #what was the biggest chllenge:
-apparenty murphy(murphy's law) as a crush on me cause everything goes wrong especially if it's the simple things.   
+apparently murphy(murphy's law) as a crush on me cause everything goes wrong especially if it's the simple things.   
 
 
 # what I've learn:
@@ -144,7 +147,7 @@ cory rice - you already know
 
 cuffy - you still my dawg 
 
-chitra & nick - anub black ops  
+chitra & nick - anbu black ops  
 
 
 
